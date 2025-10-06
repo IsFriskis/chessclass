@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: chessclass-db
+    environment:
+      POSTGRES_DB: chessclass
+      POSTGRES_USER: chessuser
+      POSTGRES_PASSWORD: chesspass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - chessclass-network
+
+volumes:
+  postgres_data:
+
+networks:
+  chessclass-network:
+    driver: bridge
