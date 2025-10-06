@@ -26,3 +26,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Database files (keep .sql scripts, ignore .db files)
+*.db
+*.sqlite
+*.sqlite3
