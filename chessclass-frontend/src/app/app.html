@@ -1,0 +1,36 @@
+<div class="container">
+  <header>
+    <h1>{{ title() }}</h1>
+  </header>
+
+  <main>
+    <div class="status-section">
+      <h2>System Status</h2>
+      
+      <button (click)="fetchStatus()" [disabled]="isLoading()" class="refresh-button">
+        {{ isLoading() ? 'Loading...' : 'Check Status' }}
+      </button>
+
+      @if (isLoading()) {
+        <div class="loading">
+          <div class="spinner"></div>
+          <p>Fetching status...</p>
+        </div>
+      }
+
+      @if (statusData() && !isLoading()) {
+        <div class="status-card" [class.status-error]="statusData()?.status === 'error'">
+          <div class="status-header">
+            <span class="status-badge" [class.badge-error]="statusData()?.status === 'error'">
+              {{ statusData()?.status }}
+            </span>
+          </div>
+          <div class="status-content">
+            <p><strong>Message:</strong> {{ statusData()?.message }}</p>
+            <p><strong>Timestamp:</strong> {{ statusData()?.timestamp }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </main>
+</div>
