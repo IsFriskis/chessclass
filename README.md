@@ -80,7 +80,7 @@ cd chessclass
 Start the PostgreSQL database using Docker Compose:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 This will start a PostgreSQL container on port 5432 with:
@@ -90,7 +90,7 @@ This will start a PostgreSQL container on port 5432 with:
 
 To stop the database:
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ### 3. Setup and Run Backend
