@@ -12,6 +12,10 @@
   <packaging>pom</packaging>
   <modules>
     <module>boot</module>
+      <module>infrastructure</module>
+      <module>module</module>
+      <module>application</module>
+      <module>apirest</module>
   </modules>
   <version>0.1</version>
   <name>chessclassbackend Maven Webapp</name>
