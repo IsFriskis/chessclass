@@ -7,10 +7,10 @@
         <version>0.1</version>
     </parent>
 
-    <artifactId>module</artifactId>
+    <artifactId>domain</artifactId>
     <packaging>jar</packaging>
 
-    <name>module</name>
+    <name>domain</name>
     <url>http://maven.apache.org</url>
 
     <properties>
